@@ -3,35 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HarteganBioApp.LandingPage">
     <ContentPage.Content>
-        <StackLayout Padding="20">
+        <StackLayout VerticalOptions="FillAndExpand"        
+                     HorizontalOptions="FillAndExpand"       
+                     Spacing="10"        
+                     Padding="10"
+                     BackgroundColor="White">
+            
+            <BoxView HeightRequest="200"/>
+            
+            
             <Label Text="Elizabeth Hartegan"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Navy"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            
 
             <Grid>
-                <Grid.RowDefinition/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                 </Grid.RowDefinitions>
 
 
-                <Grid.ColumnDefintion Width="1*"/>
-                <Grid.ColumnDefintion Width="1*"/>
-                <Grid.ColumnDefintion Width="1*"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+           
+                <Label Text="About Me"  TextColor="Navy" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Skills"  TextColor="Navy" Grid.Row="2" Grid.Column="2"/>
+                <Label Text="Contact Me" TextColor="Navy" Grid.Row="2" Grid.Column="3"/>
+
+                <Image x:Name="aboutImage"
+                       Source="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjH_8bXzI7eAhVOT6wKHaWdDacQjRx6BAgBEAU&url=https%3A%2F%2Fwww.kisspng.com%2Fpng-computer-icons-exclamation-mark-clip-art-about-me-5567760%2F&psig=AOvVaw2a1xZhnCYlDn5yBj6xn_Sl&ust=1539901822473304"
+                       Grid.Row="1"
+                       Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer                             
+                            Tapped="TapGestureRecognizer_Tapped"                             
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="skillsImage"
+                       Source="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiNguvyzI7eAhUNS6wKHaXiAmoQjRx6BAgBEAU&url=https%3A%2F%2Fthenounproject.com%2Fterm%2Fskills%2F225624%2F&psig=AOvVaw1uojrP0l3ZF9uRju1fjd4m&ust=1539904352331595"
+                       Grid.Row="1"
+                       Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer                             
+                            Tapped="TapGestureRecognizer_Tapped"                             
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="skillsImage"
+                       Source="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiNguvyzI7eAhUNS6wKHaXiAmoQjRx6BAgBEAU&url=https%3A%2F%2Fthenounproject.com%2Fterm%2Fskills%2F225624%2F&psig=AOvVaw1uojrP0l3ZF9uRju1fjd4m&ust=1539904352331595"
+                       Grid.Row="1"
+                       Grid.Column="2">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer                             
+                            Tapped="TapGestureRecognizer_Tapped"                             
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image x:Name="contactImage"
+                       Source="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwirnraVzY7eAhVNEawKHeWIC98QjRx6BAgBEAU&url=https%3A%2F%2Fwww.onlinewebfonts.com%2Ficon%2F297947&psig=AOvVaw3jH8xMvaH_8h88qyvRqDnR&ust=1539904422454972"
+                       Grid.Row="1"
+                       Grid.Column="3">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer                             
+                            Tapped="TapGestureRecognizer_Tapped"                             
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+
             </Grid>
-
-            <Button BackgroundColor="Navy"
-                    WidthRequest="100"
-                    Grid.Row="0"
-                    Grid.Column="0"/>
-
-            <Button BackgroundColor="Navy"
-                    WidthRequest="100"
-                    Grid.Row="0"
-                    Grid.Column="1"/>
-
-            <Button BackgroundColor="Navy"
-                    WidthRequest="100"
-                    Grid.Row="0"
-                    Grid.Column="2"/>
-
+           
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
