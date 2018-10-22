@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HarteganBioApp.AboutPage"
+             Title="About Me">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20"
+                         Padding="30"
+                         BackgroundColor="White">
+                <Image
+                    Source="AboutPic.png"
+                    WidthRequest="300"/>
+                <Label TextColor="Navy" HorizontalTextAlignment="Center" Text="It is my third year here at Pittsburg State University. I am a second year Resident Assistant for Crimson Commons. I major in Computer Information Systems with an emphasis in System Design and Computer Security. I am from Kansas City, Kansas."/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

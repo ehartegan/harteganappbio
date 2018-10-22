@@ -16,5 +16,19 @@ namespace HarteganBioApp
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void AboutTapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutPage());
+        }
+
+        private void SkillsTapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+           // Navigation.PushAsync(new SkillsPage());
+        }
+        private void ContactTapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContactPage());
+        }
+    }
 }
