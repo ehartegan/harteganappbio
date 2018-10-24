@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HarteganBioApp.LandingPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand"        
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand"        
                      HorizontalOptions="FillAndExpand"       
                      Spacing="10"        
-                     Padding="30"
+                     Padding="20"
                      BackgroundColor="White">
 
             <Image
@@ -27,15 +28,16 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                  </Grid.RowDefinitions>
 
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
            
@@ -45,10 +47,10 @@
                 <Label HorizontalTextAlignment="Center" Text="Contact Me" TextColor="Navy" Grid.Row="2" Grid.Column="3"/>
 
                 <Image x:Name="aboutImage"
-                       Source="About.png"
+                       Source="About.jpg"
                        Grid.Row="1"
                        Grid.Column="1"
-                       WidthRequest="40">
+                       WidthRequest="30">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer                             
                             Tapped="AboutTapGestureRecognizer_Tapped"                             
@@ -60,7 +62,7 @@
                        Source="skills.png"
                        Grid.Row="1"
                        Grid.Column="2"
-                       WidthRequest="40">
+                       WidthRequest="30">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer                             
                             Tapped="SkillsTapGestureRecognizer_Tapped"                             
@@ -68,24 +70,23 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-               
-                <Image x:Name="contactImage"
+
+                    <Image x:Name="contactImage"
                        Source="contact.png"
                        Grid.Row="1"
                        Grid.Column="3"
-                       WidthRequest="40">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer                             
+                       WidthRequest="30">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer                             
                             Tapped="ContactTapGestureRecognizer_Tapped"                             
                             NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>
-                </Image>
+                        </Image.GestureRecognizers>
+                    </Image>
 
-
-
-            </Grid>
+                </Grid>
            
             
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

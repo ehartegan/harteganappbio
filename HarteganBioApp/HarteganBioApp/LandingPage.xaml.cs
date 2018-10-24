@@ -24,7 +24,7 @@ namespace HarteganBioApp
 
         private void SkillsTapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-           // Navigation.PushAsync(new SkillsPage());
+           Navigation.PushAsync(new SkillsPage());
         }
         private void ContactTapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
