@@ -8,13 +8,43 @@
                      Padding="20"
                      BackgroundColor="White">
 
-            <Entry x:Name="skillEntry"/>
-            <Button Text="Add Skill"
-                    TextColor="White"
-                    BackgroundColor="Navy"
-                    Clicked="Button_Clicked"/>
-
-            <ListView x:Name="skillsList"/>
+            <ListView x:Name="skillsList"                      
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="15">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image WidthRequest="50"                                          
+                                           HeightRequest="50"                                          
+                                           Source="{Binding ImageURL}"                                          
+                                           Grid.Row="0"                                           
+                                           Grid.Column="0"                                           
+                                           Grid.RowSpan="2"/>
+                                    <Label Text="{Binding Name}" 
+                                           TextColor="Navy"
+                                           FontAttributes="Bold"                                           
+                                           FontSize="Large"                                          
+                                           Grid.Row="0"                                           
+                                           Grid.Column="1"/>
+                                    <Label Text="{Binding Description}" 
+                                           TextColor="Navy"
+                                           Grid.Row="1"                                           
+                                           Grid.Column="1"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         </StackLayout>
     </ContentPage.Content>
